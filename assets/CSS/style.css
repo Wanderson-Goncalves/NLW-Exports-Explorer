@@ -1,3 +1,6 @@
+@import url(_animation.css);
+
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,14 +10,14 @@
 
 
 body * {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     line-height: 160%;
 }
 
 
 body {
     background-color: #121214;
-    background-image: url(./assets/img/Fundo\ \(1\).svg);
+    background-image: url(../img/Fundo.svg);
     background-position: top center;
     background-repeat: no-repeat;
     background-size: 100% auto;
@@ -26,7 +29,7 @@ header {
 }
 
 header div {
-    background-color:  #BD9B04;
+    background-color: #BD9B04;
     border-radius: 50%;
     display: flex;
     box-shadow: 4px 4px 10px #131357;
@@ -63,8 +66,8 @@ section {
 }
 
 section div {
-    
-    background-image:  linear-gradient(162.42deg, #131357 8.18%, #191970 49.71%, #19196D 74.37%, #2A2ABD 91.25%);                                                                       
+
+    background-image: linear-gradient(162.42deg, #131357 8.18%, #191970 49.71%, #19196D 74.37%, #2A2ABD 91.25%);
     border-radius: 8px;
     box-shadow: 4px 4px 10px #131357;
     padding: 32px;
@@ -72,11 +75,12 @@ section div {
 }
 
 section h2 {
-
+    font-weight: 900;
     letter-spacing: -0.47px;
 }
 
 section p {
+    font-weight: 400;
     color: #a1a1aa;
     letter-spacing: -0.18px;
 }
@@ -99,56 +103,9 @@ section ul li:hover {
     transform: scale(1.1);
 
 }
+@import url(./animation.css);
 
 .movie-list img {
     border-radius: 8px;
     width: 90px;
-}
-
-
-
-/*animação*/
-
-header div {
-    animation: fromTop .7s .2s backwards ease;
-}
-
-@keyframes fromTop {
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-main section {
-    animation: fromBottom .7s backwards ease;
-}
-
-main section:nth-child(1) {
-    animation-delay: 0;
-}
-
-main section:nth-child(2) {
-    animation-delay: .4s;
-}
-
-main section:nth-child(3) {
-    animation-delay: .8s;
-}
-
-@keyframes fromBottom {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
